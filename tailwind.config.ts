@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Colores específicos de Stetson
+				stetson: {
+					brown: '#8B4513',
+					'light-brown': '#D2B48C',
+					gold: '#DAA520',
+					cream: '#F5F5DC',
+					'dark-brown': '#654321',
+					leather: '#996633'
 				}
 			},
 			borderRadius: {
@@ -84,11 +94,37 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'scale-in': {
+					'0%': {
+						transform: 'scale(0.95)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'scale(1)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'scale-in': 'scale-in 0.3s ease-out'
+			},
+			backgroundImage: {
+				'western-gradient': 'linear-gradient(135deg, #8B4513 0%, #DAA520 50%, #654321 100%)',
+				'leather-texture': 'linear-gradient(45deg, #996633 25%, transparent 25%), linear-gradient(-45deg, #996633 25%, transparent 25%)'
 			}
 		}
 	},
